@@ -88,11 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (form) {
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
+      // Let Formspree handle the submission normally
+      // Form will POST to Formspree and redirect on success
       successMsg.style.display = 'block';
-      form.reset();
-
+      
       setTimeout(() => {
         successMsg.style.display = 'none';
       }, 4000);
